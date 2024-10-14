@@ -16,3 +16,5 @@ class AuthorIterator:
             book = self._library.books[self._index]
             self._index += 1
             return book.author
+        else:
+            raise StopIteration
