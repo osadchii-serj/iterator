@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from library import Library
+from interface import ILibrary
 
 
 @dataclass
 class AuthorIterator:
 
-    _library: Library
+    _library: ILibrary
     _index = 0
 
     def __iter__(self):

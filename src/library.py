@@ -4,9 +4,11 @@ from author_iterator import AuthorIterator
 from library_iterator import LibraryIterator
 from genre_iterator import GenreIterator
 
+from interface import ILibrary
+
 
 @dataclass
-class Library:
+class Library(ILibrary):
 
     books = []
 

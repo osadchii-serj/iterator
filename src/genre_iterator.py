@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from library import Library
+from interface import ILibrary
 
 
 @dataclass
 class GenreIterator:
 
-    _library: Library
+    _library: ILibrary
     _index = 0
 
     def __iter__(self):
@@ -15,6 +15,6 @@ class GenreIterator:
         if self._index < len(self._library.books):
             book = self._library.books[self._index]
             self._index += 1
-            return book
+            return book.genre
         else:
             raise StopIteration
